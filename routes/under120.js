@@ -1,5 +1,5 @@
 const router = require('express').Router(); // We are creating a route
-let Under120 = require('../models/Under120.model') // Import the model
+let Under120 = require('../models/under120.model') // Import the model
 
 router.route('/').get((req, res) => { // Get: Client wants to get Data
   Under120.find() // Mongoose method that returns promise of all the documents as an array of objects 
