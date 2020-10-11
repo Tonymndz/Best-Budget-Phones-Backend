@@ -21,7 +21,7 @@ const Under50Router = require('./routes/under50'); // Import class/functions fro
 const Under100Router = require('./routes/under100'); // Import class/functions from this location
 const Under120Router = require('./routes/under120'); // Import class/functions from this location
 
-app.use('/Under50', Under50Router); // Whenever goes to root url + /exercises it will its going to load exercisesRouter
+app.use('/Under50', Under50Router); // Whenever goes to root url + /exercises it will its going to load exercisesRouter 
 app.use('/Under100', Under100Router)
 app.use('/Under120', Under120Router)
 
