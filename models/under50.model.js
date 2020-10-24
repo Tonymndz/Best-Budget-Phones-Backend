@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const under50Schema = new Schema({
+  username: {
+    required: true,
+    type: String,
+    minlength: 1
+  },
   comment: { // Single field and required property is "comment": {value}
     required: true,
     type: String, // Validations to single field

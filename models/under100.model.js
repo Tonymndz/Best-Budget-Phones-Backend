@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const Under100Schema = new Schema({
   comment: { // Single field
+    username: String,
     required: true,
     type: String, // Validations to single field
     trim: true, // Trim white-space of the end

@@ -8,9 +8,9 @@ router.route('/').get((req, res) => { // Get: Client wants to get Data
 });
 
 router.route('/add').post((req, res) => { // Post: Client wants to send data
-  const comment = req.body.comment;
+  const { username, comment } = req.body;
 
-  const newComment = new Under50({ comment }); // Creates a document using under50's document model format
+  const newComment = new Under50({ username, comment }); // Creates a document using under50's document model format
 
   newComment.save() // comment is checked and then saved to the database
     .then(() => res.json('Comment added')) // Send client a success text in json
