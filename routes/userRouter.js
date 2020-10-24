@@ -19,6 +19,9 @@ router.post("/register", async (req, res) => {
     else if (existingUser)
       errorMessage = "An account with this username already exists.";
 
+    if (errorMessage.length > 0)
+      return res.status(400).json(errorMessage) 
+
     const salt = await bcrypt.genSalt();
     passHashed = (password.length === 0) ? "" : await bcrypt.hash(password, salt)
 
