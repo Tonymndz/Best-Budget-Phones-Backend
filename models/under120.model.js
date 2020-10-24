@@ -3,8 +3,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Under120Schema = new Schema({
+  username: {
+    required: true,
+    unique: true,
+    type: String,
+    minlength: 1
+  },
   comment: { // Single field
-    username: String,
     required: true,
     type: String, // Validations to single field
     trim: true, // Trim white-space of the end

@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const under50Schema = new Schema({
   username: {
     required: true,
+    unique: true,
     type: String,
     minlength: 1
   },
