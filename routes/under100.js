@@ -13,7 +13,7 @@ router.route('/add').post((req, res) => { // Post: Client wants to send data
   const newComment = new Under100({ comment }); // Creates a document using under100's document model format
 
   newComment.save() // comment is checked and then saved to the database
-    .then(() => res.json('User added')) // Send client a success text in json
+    .then(() => res.json('Comment added')) // Send client a success text in json
     .catch(err => res.status(400).json('Error: ' + err)) // Return Error
 })
 

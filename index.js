@@ -17,13 +17,15 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true,  useUnified
 const connection = mongoose.connection; // used for shortening
 connection.once('open', () => { console.log("MongoDB database connection established successfuly"); })
 
-const Under50Router = require('./routes/under50'); // Import class/functions from this location
-const Under100Router = require('./routes/under100'); // Import class/functions from this location
-const Under120Router = require('./routes/under120'); // Import class/functions from this location
+const Under50Router = require('./routes/under50'); // Import class/function from this location
+const Under100Router = require('./routes/under100'); 
+const Under120Router = require('./routes/under120');
+const UserRouter = require("./routes/userRouter");
 
-app.use('/Under50', Under50Router); // Whenever goes to root url + /exercises it will its going to load exercisesRouter 
-app.use('/Under100', Under100Router)
-app.use('/Under120', Under120Router)
+app.use('/under50', Under50Router); // Whenever goes to root url + /exercises it will its going to load exercisesRouter 
+app.use('/under100', Under100Router)
+app.use('/under120', Under120Router)
+app.use("/users", UserRouter)
 
 const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => { console.log(`Server is running on port: ${PORT}`) });
