@@ -49,7 +49,7 @@ router.post("/login", async (req, res) => {
     else if (password.length === 0)
       errorMessage = "The password field is empty.";
     else if (!existingUser)
-      errorMessage = "No account with this name has been registered.";
+      errorMessage = "Account doesn't exist.";
     else if (!passMatches)
       errorMessage = "Password does not match with this username.";
     
