@@ -42,7 +42,7 @@ router.post("/login", async (req, res) => {
   try {
     let errorMessage = "";
     const existingUser = await User.findOne({ username: username })
-    const passMatches = await bcrypt.compare(password, existingUser.password)
+    const passMatches = existingUser ? await bcrypt.compare(password, existingUser.password) : false;
 
     if (username.length === 0)
       errorMessage = "The username field is empty.";
@@ -54,7 +54,7 @@ router.post("/login", async (req, res) => {
       errorMessage = "Password does not match with this username.";
     
     if (errorMessage.length > 0)
-      return res.status(400).json('Error: ' + errorMessage)
+      return res.status(400).json(errorMessage)
 
   const token = jwt.sign({ id: existingUser._id }, keys.JWT_SECRET)
   res.json({
