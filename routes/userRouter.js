@@ -17,7 +17,7 @@ router.post("/register", async (req, res) => {
     else if (password.length === 0)
       errorMessage = "The password field is empty.";
     else if (existingUser)
-      errorMessage = "An account with this username already exists.";
+      errorMessage = "Username already exists.";
 
     if (errorMessage.length > 0)
       return res.status(400).json(errorMessage) 
@@ -51,7 +51,7 @@ router.post("/login", async (req, res) => {
     else if (!existingUser)
       errorMessage = "Account doesn't exist.";
     else if (!passMatches)
-      errorMessage = "Password does not match with this username.";
+      errorMessage = "Invalid password.";
     
     if (errorMessage.length > 0)
       return res.status(400).json(errorMessage)
