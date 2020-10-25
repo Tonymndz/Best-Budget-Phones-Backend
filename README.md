@@ -23,9 +23,8 @@ All of the pages are similar and all of them were created using:
 Then for the backend of all the sites used:
   - NodeJs
   - Bcryptjs
-  - MonogoDB
+  - MongoDB
   - Mongoose
-  - NodeJs
   - Express
   - Json Web Token
   - Heroku
@@ -35,7 +34,7 @@ Notables Features:
   - Login
   - Comments
 
-Github Links:
+Github Source Code Links:
   - [Best Budget Phones under $60, $100, $120](https://github.com/Tonymndz/BestBudgetPhones/tree/master)
   - [Best Budget Phones under $100](https://github.com/Tonymndz/BestBudgetPhonesUnder100/tree/master)
   - [Best Budget Phones under $50](https://github.com/Tonymndz/BestBudgetPhonesUnder50/tree/master)
