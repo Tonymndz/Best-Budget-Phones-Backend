@@ -20,7 +20,7 @@ All of the pages are similar and all of them were created using:
   - Axios
   - Figma
 
-Then for the backend of all the sites used:
+The backend server was created using:
   - NodeJs
   - Bcryptjs
   - MongoDB
