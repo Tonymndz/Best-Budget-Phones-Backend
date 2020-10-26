@@ -1,0 +1,16 @@
+1.) Create a file named "key.js"
+
+2.) Add the following code to "key.js":
+module.exports = {
+  mongoURI: "",
+  JWT_SECRET: "",
+}
+
+3.) Edit the mongoURI property value to whatever you put in your MongoDB Cluster
+
+4.) Edit the JWT_SECRET property value to random generated password or whatever you want, it's just salt
+
+# Note:
+  All of my Front-end sites are looking for the server
+  https://peaceful-ocean-59292.herokuapp.com/ which you can
+  replace it with your link location for your server!
