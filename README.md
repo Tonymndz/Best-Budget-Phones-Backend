@@ -46,6 +46,9 @@
 # Install dependencies
 npm i install
 
+# Follow Instructions
+Read ./config/KEY.README to setup keys
+
 # Start the app on a new window
-npm start
+nodemon index.js
 ```
