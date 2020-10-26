@@ -2,12 +2,14 @@
 
 # Best Budget Phones Personal Sites
 ### Live Demo:
-  - [Best Budget Phones under $60, $100, $120](http://under-120.bestbudgetphones.technology/)
-<img align="center" src="https://i.ibb.co/60bq05Y/firefox-rn-Fia6ycm2.png" >
-  - [Best Budget Phones under $100](http://under-100.bestbudgetphones.technology/)
- <img align="center" src="https://i.ibb.co/608twW9/under100.png" >
-  - [Best Budget Phones under $50](http://under-50.bestbudgetphones.technology/)
- <img align="center" src="https://i.ibb.co/7CKQNft/under50.png" >
+  - <a href="http://under-120.bestbudgetphones.technology/">Best Budget Phones under $60, $100, $120</a>
+  <img align="" src="https://i.ibb.co/60bq05Y/firefox-rn-Fia6ycm2.png">
+  
+  - <a href="Best Budget Phones under $100">Best Budget Phones under $100</a>
+  <img align=""  src="https://i.ibb.co/608twW9/under100.png">
+  
+  - <a href="http://under-50.bestbudgetphones.technology/">Best Budget Phones under $50</a>
+  <img align="" src="https://i.ibb.co/7CKQNft/under50.png">
 
 ### Front-end Tools Used:
   - Create-react-app
