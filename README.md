@@ -44,7 +44,7 @@
 ### Running Locally
 ```sh
 # Install dependencies
-npm i install
+npm install
 
 # Follow Instructions
 Read ./config/KEY.README to setup keys
