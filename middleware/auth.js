@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-const keys = require('../config/key')
+// const keys = require('../config/key')
+require('dotenv').config();
 
 const auth = (req, res, next) => {
   try {
@@ -7,7 +8,7 @@ const auth = (req, res, next) => {
     if (!token)
       return res.status(401).json("No authentication token, authrization denied")
     
-    const verified = jwt.verify(token, keys.JWT_SECRET) // Something Like: { id: "5f905f488f21287", iat: 8945164871 } | Object with Properties when used .sign & iat
+    const verified = jwt.verify(token, process.env.JWT_SECRET) // Something Like: { id: "5f905f488f21287", iat: 8945164871 } | Object with Properties when used .sign & iat
     if (!verified)
       return res.status(401).json("Token verification failed, authorization denied")
 

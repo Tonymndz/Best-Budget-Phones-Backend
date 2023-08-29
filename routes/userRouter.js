@@ -2,8 +2,9 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
-const keys = require('../config/key');
+// const keys = require('../config/key');
 const auth = require('../middleware/auth');
+require('dotenv').config();
 
 router.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -56,7 +57,7 @@ router.post("/login", async (req, res) => {
     if (errorMessage.length > 0)
       return res.status(400).json(errorMessage)
 
-  const token = jwt.sign({ id: existingUser._id }, keys.JWT_SECRET)
+  const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET)
   res.json({
     token,
     user: {
@@ -75,7 +76,7 @@ router.post("/tokenIsValid", async (req, res) => {
     const token = req.header("x-auth-token"); // If Empty string returns string in string returns "\"\""
     if (!token) return res.json(false);
 
-    const verified = jwt.verify(token, keys.JWT_SECRET)
+    const verified = jwt.verify(token, process.env.JWT_SECRET)
     if (!verified) return res.json(false);
 
     const user = await User.findById(verified.id);
